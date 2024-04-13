@@ -1,11 +1,13 @@
 import asana
-from config import ACCESS_TOKEN
 import datetime
-
 from typing import List
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 configuration = asana.Configuration()
-configuration.access_token = ACCESS_TOKEN
+configuration.access_token = os.getenv("ASANA_API_TOKEN")
 api_client = asana.ApiClient(configuration)
 
 # create an instance of the API class
