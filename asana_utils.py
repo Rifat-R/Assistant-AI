@@ -4,6 +4,7 @@ from typing import List
 import os
 from dotenv import load_dotenv
 
+# Load the environment variables
 load_dotenv()
 
 configuration = asana.Configuration()
